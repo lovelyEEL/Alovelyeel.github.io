@@ -1,0 +1,11 @@
+span{
+ display: inline-block;
+   /* background-color: rgb(210, 151, 160); */
+ width: 100px;
+padding: 5px;
+ margin: 2px;
+   border: 1px solid pink;
+ box-shadow: 5px 5px 5px rgba(236, 182, 191, 0.5);
+   text-align: center;
+     color: pink;
+    }
