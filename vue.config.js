@@ -1,8 +1,7 @@
-// export default defineConfig({
-//   publicPath: "/mmrr/"
-// })
-const BASE_URL = process.env.NODE_ENV === "production" ? "/mmrr/" : "./";
-export const publicPath = BASE_URL;
+export const publicPath = "mmrr";
+
+// const BASE_URL = process.env.NODE_ENV === "production" ? "/mmrr/" : "./";
+// export const publicPath = BASE_URL;
 // import { defineConfig } from '@vue/cli-service'
 // export default defineConfig({
 //   transpileDependencies: true,
