@@ -59,7 +59,7 @@ export default {
     mounted() { }
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 @media screen and (max-width: 1024px) {
     .msgbox {
         width: 320px !important;

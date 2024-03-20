@@ -1,10 +1,10 @@
 <template>
   <div id="app" class="all">
+    <myHeader></myHeader>
     <div class="label"></div>
     <keep-alive>
       <router-view />
     </keep-alive>
-    <myHeader></myHeader>
   </div>
 </template>
 
