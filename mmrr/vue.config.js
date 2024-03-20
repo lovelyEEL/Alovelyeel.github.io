@@ -1,7 +1,7 @@
-const { defineConfig } = require('@vue/cli-service')
-module.exports = defineConfig({
-  transpileDependencies: true,
-  publicPath: '/mmrr/',    //gitee远程库名
-  outputDir: 'dist/',
-  assetsDir: 'static/'
-})
+module.exports = {
+    publicPath: process.env.NODE_ENV === 'production'
+        ? '/mmrr'
+        : '/'
+    ,
+    productionSourceMap: false,
+}
