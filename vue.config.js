@@ -1,6 +1,3 @@
-module.exports = {
-  lintOnSave: false,
-  assetsDir: 'static',
-  parallel: false,
-  publicPath: './'
-}
+module.exports = defineConfig({
+  publicPath: "/mmrr/"
+})
