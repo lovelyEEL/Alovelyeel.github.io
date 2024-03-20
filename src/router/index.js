@@ -6,28 +6,30 @@ import about from '@/components/about/about'
 import up from '@/components/up/up'
 
 Vue.use(Router)
-
-export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'index',
-      component: index
-    },
-    {
-      path:'/foot',
-      name:'foot',
-      component:foot
-    },
-    {
-      path:'/about',
-      name:'about',
-      component:about
-    },
-    {
-      path:'/up',
-      name:'up',
-      component:up
-    },
-  ]
+const routes = [
+  {
+    path: '/',
+    name: 'index',
+    component: index
+  },
+  {
+    path: '/foot',
+    name: 'foot',
+    component: foot
+  },
+  {
+    path: '/about',
+    name: 'about',
+    component: about
+  },
+  {
+    path: '/up',
+    name: 'up',
+    component: up
+  },
+]
+const router  = new Router({
+  routes,
+  mode:'history'
 })
+export default router;
