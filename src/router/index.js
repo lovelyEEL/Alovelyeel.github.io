@@ -29,7 +29,6 @@ const routes = [
   },
 ]
 const router  = new Router({
-  routes,
-  mode:'history'
+  routes
 })
 export default router;
