@@ -1,4 +1,6 @@
-module.exports = defineConfig({
-  publicPath: "/mmrr/",
-  base: './',
-})
+module.exports = {
+  lintOnSave: false,
+  publicPath: process.env.NODE_ENV === 'production'
+  ? '/mmrr/'
+  : '/'
+}
