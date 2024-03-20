@@ -1,6 +1,7 @@
-// module.exports = defineConfig({
+// export default defineConfig({
 //   publicPath: "/mmrr/"
 // })
+
 import { defineConfig } from '@vue/cli-service'
 export default defineConfig({
   transpileDependencies: true,
