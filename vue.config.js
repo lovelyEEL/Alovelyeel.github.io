@@ -1,8 +1,8 @@
 // module.exports = defineConfig({
 //   publicPath: "/mmrr/"
 // })
-const { defineConfig } = require('@vue/cli-service')
-module.exports = defineConfig({
+import { defineConfig } from '@vue/cli-service'
+export default defineConfig({
   transpileDependencies: true,
   publicPath: '/mmrr/',    //gitee远程库名
   outputDir: 'dist/',
