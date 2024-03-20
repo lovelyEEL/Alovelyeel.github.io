@@ -68,6 +68,9 @@ export default {
 
 .header {
     width: 100%;
+    z-index: 99999999;
+    position: fixed;
+    top: 0;
     /deep/ .is-active {
         border-bottom: none !important;
     }

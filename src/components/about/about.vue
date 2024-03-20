@@ -67,7 +67,7 @@
                         <div class="cert">
                             <div style="text-align: center;margin: 10px 0 10px 0;">在校信息</div>
                             <div class="certContne">
-                                <el-carousel :autoplay="true" class="certImg" indicator-position="outside">
+                                <el-carousel  :autoplay="true" class="certImg" indicator-position="outside">
                                     <el-carousel-item v-for="item, index in urls" :key="item">
                                         <el-image style="width: 100%; height: 100%" :src="urls[index]"
                                             :preview-src-list="urls">
@@ -453,6 +453,7 @@ export default {
                         .certImg {
                             width: 100%;
                             max-width: 420px;
+                            z-index: 0;
 
                             img {
                                 width: 100%;
