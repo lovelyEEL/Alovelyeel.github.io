@@ -1,3 +1,10 @@
+// module.exports = defineConfig({
+//   publicPath: "/mmrr/"
+// })
+const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
-  publicPath: "/mmrr/"
+  transpileDependencies: true,
+  publicPath: '/mmrr/',    //gitee远程库名
+  outputDir: 'dist/',
+  assetsDir: 'static/'
 })
