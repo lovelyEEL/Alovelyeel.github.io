@@ -1,21 +1,21 @@
 # mmrr
 
-#### 介绍
-敏敏润润的日志仓库😊
+> A Vue.js project
 
-#### 软件架构
-vue + spring boot
+## Build Setup
 
+``` bash
+# install dependencies
+npm install
 
-#### 安装教程
+# serve with hot reload at localhost:888
+npm run dev
 
-1.  仅限敏敏润润使用
+# build for production with minification
+npm run build
 
-#### 使用说明
+# build for production and view the bundle analyzer report
+npm run build --report
+```
 
-1.  仅限敏敏润润使用
-
-#### 参与贡献
-
-1.  敏敏
-2.  润润
+For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
