@@ -10,7 +10,8 @@ import "lib-flexible"
 // 引入elementUi
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
-
+import Highlight from './util/highlight'
+Vue.use(Highlight)
 Vue.use(ElementUI)
 
 import router from './router'

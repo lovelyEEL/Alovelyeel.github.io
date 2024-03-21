@@ -1,11 +1,17 @@
-export const publicPath = "mmrr";
+// export const publicPath = "mmrr";
 
-// const BASE_URL = process.env.NODE_ENV === "production" ? "/mmrr/" : "./";
-// export const publicPath = BASE_URL;
-// import { defineConfig } from '@vue/cli-service'
-// export default defineConfig({
-//   transpileDependencies: true,
-//   publicPath: '/mmrr/',    //gitee远程库名
-//   outputDir: 'dist/',
-//   assetsDir: 'static/'
-// })
+module.exports = {
+    chainWebpack: config => {
+        config.module
+            .rule('md')
+            .test(/\.md/)
+            .use('vue-loader')
+            .loader('vue-loader')
+            .end()
+            .use('vue-markdown-loader')
+            .loader('vue-markdown-loader/lib/markdown-compiler')
+            .options({
+                raw: true
+            })
+    }
+}

@@ -4,7 +4,7 @@
             <div class="topAble">
                 <div class="topTitle">
                     <div class="title">
-                        RH博客
+                        RH雅舍
                     </div>
                 </div>
             </div>
@@ -15,22 +15,23 @@
             <div class="midDescribe">
                 <div class="introduce">
                     <div class="i"></div>
-                    <div class="itext">基本信息</div>
+                    <div class="itext">本站信息</div>
                 </div>
                 <div class="detail">
                     <div class="dText">
-                        <div>■&nbsp;&nbsp;作者&nbsp;&nbsp;</div>
-                        <div style="font-family: 'luck';">RHHH（梁润豪）</div>
+                        <div>■&nbsp;&nbsp;技术栈&nbsp;&nbsp;</div>
+                        <div>Vue+spring boot</div>
                     </div>
                     <div class="dText">
-                        <div>■&nbsp;&nbsp;性别&nbsp;&nbsp;</div>
-                        <div>👽</div>
+                        <div>■&nbsp;&nbsp;开发者&nbsp;&nbsp;</div>
+                        <div>👽梁润豪</div>
                     </div>
                     <div class="dText">
-                        <div>■&nbsp;&nbsp;状态&nbsp;&nbsp;</div>
-                        <div>__↗↘__↗``🤩</div>
+                        <div>■&nbsp;&nbsp;粗略开发，兼容PC端和手机端&nbsp;&nbsp;</div>
+                        <div></div>
                     </div>
                 </div>
+                <md class="markdown-body" />
                 <div class="introduce">
                     <div class="i"></div>
                     <div class="itext">作者介绍</div>
@@ -65,9 +66,9 @@
                     </div>
                     <div class="contant">
                         <div class="cert">
-                            <div style="text-align: center;margin: 10px 0 10px 0;">在校信息</div>
+                            <div style="text-align: center;margin: 10px 0 10px 0;">教育信息</div>
                             <div class="certContne">
-                                <el-carousel  :autoplay="true" class="certImg" indicator-position="outside">
+                                <el-carousel :autoplay="true" class="certImg" indicator-position="outside">
                                     <el-carousel-item v-for="item, index in urls" :key="item">
                                         <el-image style="width: 100%; height: 100%" :src="urls[index]"
                                             :preview-src-list="urls">
@@ -202,29 +203,11 @@
                 </div>
                 <div class="introduce">
                     <div class="i"></div>
-                    <div class="itext">本站信息</div>
-                </div>
-                <div class="detail">
-                    <div class="dText">
-                        <div>■&nbsp;&nbsp;技术栈&nbsp;&nbsp;</div>
-                        <div>Vue2+spring boot</div>
-                    </div>
-                    <div class="dText">
-                        <div>■&nbsp;&nbsp;开发者&nbsp;&nbsp;</div>
-                        <div>👽梁润豪</div>
-                    </div>
-                    <div class="dText">
-                        <div>■&nbsp;&nbsp;粗略开发，兼容PC端和手机端&nbsp;&nbsp;</div>
-                        <div></div>
-                    </div>
-                </div>
-                <div class="introduce">
-                    <div class="i"></div>
                     <div class="itext">未来展望</div>
                 </div>
                 <div class="detail">
                     <div class="dText">
-                        <div>继续学习前端前沿技术，找到份好工作</div>
+                        <div>继续学习前端前沿技术，在岗位上贡献自己一份力量</div>
                         <div></div>
                     </div>
                     <div class="dText">
@@ -255,8 +238,11 @@
 </template>
 
 <script>
+import md from '../../assets/introduce.md'
+import "highlight.js/styles/github.css";
+import "github-markdown-css";
 export default {
-    components: {},
+    components: {md},
     props: {},
     data() {
         return {
@@ -300,6 +286,14 @@ export default {
     .section-title {
         margin: 16px 0 0 0;
     }
+}
+
+.markdown-body {
+    box-sizing: border-box;
+    min-width: 200px;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 2px;
 }
 
 .top {
@@ -474,9 +468,10 @@ export default {
                 font-size: 16px;
                 margin-bottom: 8px;
                 display: flex;
+                align-items: center;
 
                 :last-child {
-                    font-family:fantasy;
+                    font-family: fantasy;
                     font-weight: bolder;
                 }
             }

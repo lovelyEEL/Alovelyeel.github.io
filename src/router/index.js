@@ -4,6 +4,7 @@ import index from '@/components/index/index'
 import foot from '@/components/footPage/foot'
 import about from '@/components/about/about'
 import up from '@/components/up/up'
+import detail from '@/components/detail/detail'
 
 Vue.use(Router)
 const routes = [
@@ -27,6 +28,11 @@ const routes = [
     name: 'up',
     component: up
   },
+  {
+    path:'/detail',
+    name:'detail',
+    component:detail
+  }
 ]
 const router  = new Router({
   routes

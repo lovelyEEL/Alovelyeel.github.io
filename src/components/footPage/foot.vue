@@ -1,5 +1,5 @@
 <template>
-  <div>111</div>
+  <div style="text-align: center;">暂未开发</div>
 </template>
 
 <script>

@@ -7,9 +7,8 @@
             </el-menu-item>
             <el-submenu index="3" style="float: right;">
                 <template slot="title"><i class="el-icon-menu"></i></template>
-                <el-menu-item index="3-1">选项1</el-menu-item>
-                <el-menu-item index="3-2">选项2</el-menu-item>
-                <el-menu-item index="3-3">选项3</el-menu-item>
+                <el-menu-item index="3-1">文章</el-menu-item>
+                <el-menu-item index="3-2">搜索</el-menu-item>
             </el-submenu>
             <el-menu-item index="2" style="float: right;">
                 <i class="el-icon-s-promotion"></i>
@@ -42,13 +41,14 @@ export default {
                     // inputErrorMessage: '邮箱格式不正确',
                     customClass: 'msgbox',
                 }).then(({ value }) => {
-                    this.$router.push({
-                        path: "/up",
-                        name: "up",
-                        query: {
-                            value: value
-                        },
-                    })
+                    this.$message.error('还没开发好');
+                    // this.$router.push({
+                    //     path: "/up",
+                    //     name: "up",
+                    //     query: {
+                    //         value: value
+                    //     },
+                    // })
                 }).catch(() => {
 
                 });
@@ -68,11 +68,14 @@ export default {
 
 .header {
     width: 100%;
-    z-index: 99999999;
+    z-index: 999;
     position: fixed;
     top: 0;
     /deep/ .is-active {
         border-bottom: none !important;
+    }
+    /deep/ .el-menu-item{
+        color: #909399 !important;
     }
 }
 </style>

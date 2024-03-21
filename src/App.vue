@@ -1,10 +1,12 @@
 <template>
-  <div id="app" class="all">
-    <myHeader></myHeader>
-    <div class="label"></div>
-    <keep-alive>
-      <router-view />
-    </keep-alive>
+  <div id="app">
+    <div class="all">
+      <myHeader></myHeader>
+      <div class="label"></div>
+      <keep-alive>
+        <router-view />
+      </keep-alive>
+    </div>
   </div>
 </template>
 
@@ -36,10 +38,15 @@ body {
   margin: 0;
   width: 100%;
   height: 100%;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background: #fafafa;
+
   color: #444;
 }
 
@@ -63,7 +70,6 @@ body {
 }
 
 @media screen and (min-width:1025px) {
-
   /* // 屏幕大于1025px的时候 */
   .all {
     width: 1024px;

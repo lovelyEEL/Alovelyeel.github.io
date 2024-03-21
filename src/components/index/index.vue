@@ -4,11 +4,11 @@
             <div class="topAble">
                 <div class="topTitle">
                     <div class="title">
-                        RH博客
+                        RH雅舍
                     </div>
                 </div>
             </div>
-            <p class="author">⭐RHHH⭐</p>
+            <p class="author">hello!</p>
         </div>
         <div class="dh">
             <h2 class="section-title"> -- 导航 -- </h2>
@@ -26,11 +26,14 @@
                 </router-link>
             </div>
             <h2 class="section-title"> -- 日志 -- </h2>
-            <div class="container">
-                <div class="box">
 
+            <div class="box">
+                <div class="log" v-for="item, index in logList" key="item" @click="toDetail(item.id)">
+                    <div class="logName">{{ (index+1) + "."+item.name }}</div>
+                    <div class="logDate">{{ item.date }}</div>
                 </div>
             </div>
+
         </div>
     </div>
 </template>
@@ -41,7 +44,14 @@ export default {
     props: {},
     data() {
         return {
-            activeIndex: '1'
+            activeIndex: '1',
+            logList: [
+                {
+                    name: "博客介绍",
+                    date: "2024-3-21",
+                    id:"0"
+                }
+            ]
         };
     },
     watch: {},
@@ -49,12 +59,20 @@ export default {
     methods: {
         tipsShow() {
             this.$notify({
-                title: '欢迎来到RH博客',
+                title: '欢迎来到RH雅舍',
                 message: '贵宾请入座',
                 duration: 2000,
                 position: 'top-left'
             });
-        }
+        },
+        toDetail(index){
+            this.$router.push({
+                name:'detail',
+                params:{
+                    index:index
+                }
+            })
+        },
     },
     created() {
         this.tipsShow()
@@ -114,9 +132,18 @@ export default {
     }
 }
 
+/deep/ .el-notification {
+    z-index: 9999;
+}
+
+
+.container {
+    height: 79%;
+}
+
 .top {
     padding: 18px;
-    border-bottom: 0.5px solid gray;
+    border-bottom: 0.5px dashed gray;
 
     .topAble {
         width: 100%;
@@ -149,9 +176,19 @@ export default {
         font-family: "luck";
     }
 }
-.dh{
+
+.dh {
     animation: dh 1s;
+    max-width: 981px;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(../../assets/img/bg.png);
+    background-attachment: fixed;
+    background-position: center 260px;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
 }
+
 .mid {
     :hover {
         border: 2px solid black !important;
@@ -159,7 +196,7 @@ export default {
 
     .midBox {
         border: 2px solid rgb(230, 230, 230);
-        border-radius: 2px;
+        border-radius: 4px;
         padding: 10px;
         height: 110px !important;
         text-decoration: none;
@@ -188,6 +225,23 @@ export default {
     }
 }
 
+.box {
+    padding: 20px;
+
+    .log {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        font-size: 24px;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        justify-content: space-around;
+        cursor: pointer;
+        .logName {
+            text-decoration: underline;
+        }
+    }
+}
+
 .section-title {
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
@@ -202,4 +256,5 @@ export default {
     100% {
         opacity: 1;
     }
-}</style>
+}
+</style>
