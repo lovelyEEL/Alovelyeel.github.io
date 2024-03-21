@@ -1,4 +1,4 @@
-// export const publicPath = "mmrr";
+export const publicPath = "mmrr";
 
 module.exports = {
     chainWebpack: config => {
