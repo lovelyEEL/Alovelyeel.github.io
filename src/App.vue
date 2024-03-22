@@ -6,6 +6,7 @@
       <keep-alive>
         <router-view />
       </keep-alive>
+      <div class="copyright"> Copyright © 2024 by Liang Runhao </div>
     </div>
   </div>
 </template>
@@ -59,6 +60,20 @@ body {
 
 .label {
   height: 60.8px;
+}
+
+.copyright{
+  background-color: white;
+    position: fixed;
+    bottom: 0;
+    padding: 4px;
+    width: 100%;
+    max-width: 1020px;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    color: #212529;
+    font-size: 9.5px;
+    box-shadow: 0 5px 15px -5px rgba(0, 0, 0, .5);
 }
 
 @media screen and (max-width:1024px) {

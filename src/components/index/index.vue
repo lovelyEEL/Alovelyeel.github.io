@@ -13,8 +13,8 @@
         <div class="dh">
             <h2 class="section-title"> -- 导航 -- </h2>
             <div class="mid">
-                <router-link to="/foot" class="midBox">
-                    <div class="boxTit">足 迹</div>
+                <router-link to="/allPages" class="midBox">
+                    <div class="boxTit">文章</div>
                     <div class="describe">记录生活的点点滴滴</div>
                     <div class="describe">记录学习的脚印</div>
                     <!-- <img src="@/assets/img/chi1.png"> -->
@@ -25,15 +25,14 @@
                     <div class="describe">关于作者</div>
                 </router-link>
             </div>
-            <h2 class="section-title"> -- 日志 -- </h2>
+            <h2 class="section-title"> -- 精选 -- </h2>
 
             <div class="box">
-                <div class="log" v-for="item, index in logList" key="item" @click="toDetail(item.id)">
-                    <div class="logName">{{ (index+1) + "."+item.name }}</div>
+                <div class="log" v-for="item, index in logList" :key="index" @click="toDetail(item.id)">
+                    <div class="logName">{{ (index + 1) + "." + item.name }}</div>
                     <div class="logDate">{{ item.date }}</div>
                 </div>
             </div>
-
         </div>
     </div>
 </template>
@@ -47,9 +46,14 @@ export default {
             activeIndex: '1',
             logList: [
                 {
-                    name: "博客介绍",
+                    name: "博客搭建介绍",
                     date: "2024-3-21",
-                    id:"0"
+                    id: "1"
+                },
+                {
+                    name: "入门前端小建议",
+                    date: "2024-3-22",
+                    id: "2"
                 }
             ]
         };
@@ -65,11 +69,11 @@ export default {
                 position: 'top-left'
             });
         },
-        toDetail(index){
+        toDetail(index) {
             this.$router.push({
-                name:'detail',
-                params:{
-                    index:index
+                name: 'detail',
+                params: {
+                    index: index
                 }
             })
         },
@@ -99,6 +103,19 @@ export default {
     .section-title {
         margin: 8px 0 0 0;
     }
+
+    .dh {
+        background-attachment: fixed;
+        background-position: center 260px;
+        background-repeat: no-repeat;
+    }
+
+    .container {
+        background-attachment: fixed;
+        background-position: right -30px top 20px;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+    }
 }
 
 @media screen and (min-width:981px) {
@@ -127,8 +144,25 @@ export default {
         }
     }
 
+    .dh {
+        background-size: 400px auto;
+    }
+
     .section-title {
         margin: 16px 0 0 0;
+    }
+
+    .dh {
+        background-attachment: fixed;
+        background-position:left 36% bottom;
+        background-repeat: no-repeat;
+    }
+
+    .container {
+        background-attachment: fixed;
+        background-position: right 200px top;
+        background-size: 50% auto;
+        background-repeat: no-repeat;
     }
 }
 
@@ -139,6 +173,7 @@ export default {
 
 .container {
     height: 79%;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(../../assets/img/bg1.png);
 }
 
 .top {
@@ -181,12 +216,8 @@ export default {
     animation: dh 1s;
     max-width: 981px;
     width: 100%;
-    height: 100%;
+    height: 99%;
     background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(../../assets/img/bg.png);
-    background-attachment: fixed;
-    background-position: center 260px;
-    background-repeat: no-repeat;
-    background-size: 100% auto;
 }
 
 .mid {
@@ -226,17 +257,20 @@ export default {
 }
 
 .box {
-    padding: 20px;
+    padding: 10px;
+    padding: 0 30px 0px 30px;
 
     .log {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         font-size: 24px;
-        font-family:Georgia, 'Times New Roman', Times, serif;
-        justify-content: space-around;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        justify-content: space-between;
+        margin-top: 14px;
         cursor: pointer;
-        .logName {
+
+        .logDate {
             text-decoration: underline;
         }
     }

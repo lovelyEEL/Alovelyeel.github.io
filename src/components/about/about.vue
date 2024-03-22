@@ -39,8 +39,8 @@
                         <div class="card">
                             <div class="cardLeft">
                                 <div class="cardLabel">
-                                    <div class="cardTit">本科就读：</div>
-                                    <div>广州应用科技学院</div>
+                                    <div class="cardTit">学历：</div>
+                                    <div>本科(某不知名高校)</div>
                                 </div>
                                 <div class="cardLabel">
                                     <div class="cardTit">就读专业：</div>
@@ -60,8 +60,22 @@
                                 </div>
                             </div>
                             <div class="cardRight">
-                                <img src="../../assets/img/about/my.jpg">
+                                <img src="../../assets/img/about/my.png">
                             </div>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <div class="dText">
+                            <div>■&nbsp;&nbsp;爱好：篮球、游泳、旅游和游戏&nbsp;&nbsp;</div>
+                            <div></div>
+                        </div>
+                        <div class="dText">
+                            <div>■&nbsp;&nbsp;mbti：ENFP-j&nbsp;&nbsp;</div>
+                            <div></div>
+                        </div>
+                        <div class="dText">
+                            <div>■&nbsp;&nbsp;其他：乐观积极随和的小伙子&nbsp;&nbsp;</div>
+                            <div></div>
                         </div>
                     </div>
                     <div class="contant">
@@ -83,7 +97,17 @@
                         </div>
                         <div style="text-align: center;margin: 10px 0 10px 0;">奖项证书（点击查看大图）</div>
                     </div>
-                    <div class="contant">
+                    <div class="detail">
+                        <div class="dText">
+                            <div>■&nbsp;&nbsp;积极学习互联网前沿知识&nbsp;&nbsp;</div>
+                            <div></div>
+                        </div>
+                        <div class="dText">
+                            <div>■&nbsp;&nbsp;热爱编程、痴迷实现需求&nbsp;&nbsp;</div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <!-- <div class="contant">
                         <div class="card" style="background-image: none;">
                             <div class="cardLeft" style="width: 100%;">
                                 <div class="cardLabel">
@@ -199,7 +223,7 @@
                             </div>
                         </div>
                         <div style="text-align: center;margin: 18px 0 0 0;">工作、校园经历</div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="introduce">
                     <div class="i"></div>
@@ -242,15 +266,15 @@ import md from '../../assets/introduce.md'
 import "highlight.js/styles/github.css";
 import "github-markdown-css";
 export default {
-    components: {md},
+    components: { md },
     props: {},
     data() {
         return {
             urls: [
                 'http://safere.oss-cn-guangzhou.aliyuncs.com/%E5%B7%A5%E4%B8%9A%E4%BA%92%E8%81%94%E7%BD%91%E5%B7%A5%E4%B8%9A%E4%BA%92%E8%81%94%E7%BD%91%E5%B9%B3%E5%8F%B0%E5%BC%80%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88%E5%88%9D%E7%BA%A7%E8%AF%81%E4%B9%A6.png',
-                'http://safere.oss-cn-guangzhou.aliyuncs.com/%E6%A2%81%E6%B6%A6%E8%B1%AA%E8%93%9D%E6%A1%A5%E6%9D%AF.jpg',
-                'http://safere.oss-cn-guangzhou.aliyuncs.com/%E7%A7%91%E6%8A%80%E8%8A%82%E8%AF%81%E4%B9%A6.jpg',
-                'http://safere.oss-cn-guangzhou.aliyuncs.com/%E4%BC%98%E7%A7%80%E5%A4%A7%E5%AD%A6%E7%94%9F.jpg'
+                'http://safere.oss-cn-guangzhou.aliyuncs.com/j1%281%29.png',
+                'http://safere.oss-cn-guangzhou.aliyuncs.com/j3%281%29.png',
+                'http://safere.oss-cn-guangzhou.aliyuncs.com/j2%281%29.png'
             ],
             workUrls: {
                 urls1: ['http://safere.oss-cn-guangzhou.aliyuncs.com/%E5%AE%9E%E4%B9%A0%E8%AF%81%E6%98%8E1.jpg'],
@@ -263,9 +287,7 @@ export default {
     watch: {},
     computed: {},
     methods: {
-        preview(index) {
-            console.log(index);
-        },
+        preview(index) {},
     },
     created() { },
     mounted() { }

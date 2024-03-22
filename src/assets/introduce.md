@@ -17,7 +17,7 @@
 
 - **CSS：**
   
-  1. 利用css的media媒体监听属性，监听screen的变化并作出相对应调整
+1. 利用css的media媒体监听属性，监听screen的变化并作出相对应调整
      
      ```css
      @media screen and (min-width:1025px) {
@@ -29,35 +29,35 @@
      }
      ```
   
-  2. 利用%、vw、vh等自适应单位。后面会讲到px转rem
+2. 利用%、vw、vh等自适应单位。后面会讲到px转rem
   
-  3. 擅长利用**display**、**float**和**position**属性，使元素想在哪就在哪。
+3. 擅长利用**display**、**float**和**position**属性，使元素想在哪就在哪。
 
 - **JS：**
   
-  1. 可利用window.οnresize监听屏幕大小变化，可利用document.body.clientWidth/Height监听获取当前body宽高
+1. 可利用window.οnresize监听屏幕大小变化，可利用document.body.clientWidth/Height监听获取当前body宽高
   
-  2. 配合vue双向数据绑定特性，修改dom元素内嵌的style属性值以更改元素样式
+2. 配合vue双向数据绑定特性，修改dom元素内嵌的style属性值以更改元素样式
   
-  3. 不建议用js去做页面适配
+3. 不建议用js去做页面适配
 
 - **postcss-pxtorem：**
   
-  1. postcss-pxtorem是一个PostCSS插件，用于将CSS中的像素值转换为rem单位，以实现响应式布局和适配不同屏幕尺寸的需求。
+1. postcss-pxtorem是一个PostCSS插件，用于将CSS中的像素值转换为rem单位，以实现响应式布局和适配不同屏幕尺寸的需求。
      
-     它的适配原理是**将CSS中的像素值除以一个基准值，通常是设计稿的宽度，然后将结果转换为<mark>rem</mark>单位。**这样，不同屏幕尺寸下，rem单位的大小是相同的，从而实现了响应式布局和适配的效果。
+    它的适配原理是**将CSS中的像素值除以一个基准值，通常是设计稿的宽度，然后将结果转换为<mark>rem</mark>单位。**这样，不同屏幕尺寸下，rem单位的大小是相同的，从而实现了响应式布局和适配的效果。
      
-     例如，如果设计稿的宽度为750px，那么在CSS中设置一个元素的宽度为150px，postcss-pxtorem会将其转换为2rem（150/750=.2，.2*10=2）。
+    例如，如果设计稿的宽度为750px，那么在CSS中设置一个元素的宽度为150px，postcss-pxtorem会将其转换为2rem（150/750=.2，.2*10=2）。
      
-     通过使用postcss-pxtorem，我们可以方便地实现移动端适配，减少手动计算和调整像素值的工作量，提高开发效率。
+    通过使用postcss-pxtorem，我们可以方便地实现移动端适配，减少手动计算和调整像素值的工作量，提高开发效率。
   
-  2. 安装教程
+2. 安装教程
      
-     1. ```
+    1. ```
         npm install postcss-pxtorem --save
         ```
      
-     2. 配置postcss.config.js文件，如没有，在根目录下新建
+    2. 配置postcss.config.js文件，如没有，在根目录下新建
         
         ```javascript
         module.exports = {
