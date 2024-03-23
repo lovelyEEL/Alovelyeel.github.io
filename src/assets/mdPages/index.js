@@ -28,6 +28,15 @@ export default {
                 describe: "入门前端小建议",
                 date: "2024-03-22",
             },
+            {
+                id: 3,
+                name: 'pages3',
+                type: ['JavaScript'],
+                class: '1',
+                author:"原著",
+                describe: "ES6新特性",
+                date: "2024-03-23",
+            },
         ]
     })
 }

@@ -11,12 +11,14 @@
 <script>
 import pages1 from '../../assets/mdPages/pages1.md'
 import pages2 from '../../assets/mdPages/pages2.md'
+import pages3 from '../../assets/mdPages/pages3.md'
 import "highlight.js/styles/github.css";
 import "github-markdown-css";
 export default {
     components: {
         pages1,
-        pages2
+        pages2,
+        pages3
     },
     props: {},
     data() {
@@ -68,7 +70,7 @@ export default {
     margin: 0 auto;
     padding: 12px;
     animation: dh 1s;
-    padding-bottom: 60px;
+    padding-bottom: 90px;
 }
 
 .container {

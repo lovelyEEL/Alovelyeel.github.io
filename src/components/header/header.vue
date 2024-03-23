@@ -5,7 +5,7 @@
             <el-menu-item index="1" @click="toIndex()">
                 <i class="el-icon-s-home"></i>
             </el-menu-item>
-            <el-menu-item v-if="$route.path=='/detail'" index="5">
+            <el-menu-item v-if="$route.path == '/detail'" index="5">
                 <i class="el-icon-arrow-left"></i>
             </el-menu-item>
             <el-submenu class="set" index="2" style="float: right;">
@@ -133,6 +133,9 @@ export default {
 
     /deep/ .el-menu-item {
         color: #909399 !important;
+        .is-active {
+            color: #909399 ;
+        }
     }
 }
 </style>

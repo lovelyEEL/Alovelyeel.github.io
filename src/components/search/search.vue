@@ -11,7 +11,7 @@
             <div class="pad">
                 <div class="label" v-for="item, index in arrList" :key="index" @click="toDetail(item.id)">
                     <div style="display: flex;flex-wrap: wrap;align-items: center;width: 100%;">
-                        <div class="tit">{{ item.describe }}</div>
+                        <div class="tit" v-html="brightenKeyword(item.describe)"></div>
                         <div class="date">{{ item.date }}</div>
                     </div>
                     <div
@@ -37,13 +37,15 @@ export default {
     data() {
         return {
             search: '',
+            newArr: []
         };
     },
-    watch: {},
+    watch: {
+    },
     computed: {
         arrList() {
             return this.arr.filter(res => {
-                return res.describe.match(this.search)
+                return res.describe.match(new RegExp(this.search,'i'))
             })
         }
     },
@@ -55,6 +57,16 @@ export default {
                     index: index
                 }
             })
+        },
+        brightenKeyword(val) {
+            let keyword = this.search//*搜索关键字*
+            val = val + '';
+            if (val.toLowerCase().indexOf(keyword.toLowerCase()) !== -1 && keyword !== '') {
+                const text=String(val).match(new RegExp(keyword,'i'))
+                return val.replace(new RegExp(keyword,'i'), '<font color="red">' + text + '</font>')
+            } else {
+                return val
+            }
         }
     },
     created() { },
@@ -72,6 +84,7 @@ export default {
         width: 80%;
     }
 }
+
 @keyframes dh {
     0% {
         opacity: 0;
@@ -81,9 +94,33 @@ export default {
         opacity: 1;
     }
 }
-.container{
+
+@media screen and (min-width:981px) {
+    .label {
+        width: 600px;
+        height: 60px;
+    }
+    .label:hover{
+        width: 606px;
+        height: 62px;
+    }
+
+    /* // 屏幕大于等于981px的时候 */
+}
+
+@media screen and (max-width:980px) {
+    .label {
+        width: 84%;
+        height: auto;
+    }
+
+    /* // 屏幕小于等于980px的时候 */
+}
+
+.container {
     animation: dh 1s;
 }
+
 .tips {
     text-align: center;
     margin-top: 20px;
@@ -99,13 +136,12 @@ export default {
 
     .label {
         margin-bottom: 20px;
-        box-shadow: 2px 5px 16px -5px rgba(0, 0, 0, .5);
+        box-shadow:   3px 3px 16px #cccccc,
+             -3px -3px 16px #f4f4f4;
         border-radius: 4px;
         padding: 10px 16px 12px 16px;
-        width: 86%;
-        height: auto;
         cursor: pointer;
-
+        max-width: 610px;
         .tit {
             font-size: 28px;
             font-family: Georgia, 'Times New Roman', Times, serif;

@@ -40,7 +40,7 @@
                             <div class="cardLeft">
                                 <div class="cardLabel">
                                     <div class="cardTit">学历：</div>
-                                    <div>本科(某不知名高校)</div>
+                                    <div>本科</div>
                                 </div>
                                 <div class="cardLabel">
                                     <div class="cardTit">就读专业：</div>
@@ -52,7 +52,7 @@
                                 </div>
                                 <div class="cardLabel">
                                     <div class="cardTit">在校绩点：</div>
-                                    <div>3.62/5.0（前15%）</div>
+                                    <div>3.92/5.0（前10%）</div>
                                 </div>
                                 <div class="cardLabel">
                                     <div class="cardTit">钻研方向：</div>
@@ -63,24 +63,24 @@
                                 <img src="../../assets/img/about/my.png">
                             </div>
                         </div>
+                        <div style="text-align: center;margin: 10px 0 10px 0;width: 100%;">教育信息</div>
                     </div>
                     <div class="detail">
                         <div class="dText">
-                            <div>■&nbsp;&nbsp;爱好：篮球、游泳、旅游和游戏&nbsp;&nbsp;</div>
-                            <div></div>
-                        </div>
-                        <div class="dText">
-                            <div>■&nbsp;&nbsp;mbti：ENFP-j&nbsp;&nbsp;</div>
+                            <div>■&nbsp;&nbsp;爱好：篮球、游泳、旅游和LOL&nbsp;&nbsp;</div>
                             <div></div>
                         </div>
                         <div class="dText">
                             <div>■&nbsp;&nbsp;其他：乐观积极随和的小伙子&nbsp;&nbsp;</div>
                             <div></div>
                         </div>
+                        <div class="dText">
+                            <div>■&nbsp;&nbsp;mbti：ENFJ-p&nbsp;&nbsp;</div>
+                            <div></div>
+                        </div>
                     </div>
-                    <div class="contant">
+                    <div class="contant" style="margin-top: 20px;">
                         <div class="cert">
-                            <div style="text-align: center;margin: 10px 0 10px 0;">教育信息</div>
                             <div class="certContne">
                                 <el-carousel :autoplay="true" class="certImg" indicator-position="outside">
                                     <el-carousel-item v-for="item, index in urls" :key="item">
@@ -107,7 +107,7 @@
                             <div></div>
                         </div>
                     </div>
-                    <!-- <div class="contant">
+                    <div class="contant">
                         <div class="card" style="background-image: none;">
                             <div class="cardLeft" style="width: 100%;">
                                 <div class="cardLabel">
@@ -135,7 +135,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="contant">
+                        <!-- <div class="contant">
                             <div class="card" style="background-image: none;">
                                 <div class="cardLeft" style="width: 100%;">
                                     <div class="cardLabel">
@@ -163,7 +163,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="contant">
                             <div class="card" style="background-image: none;">
                                 <div class="cardLeft" style="width: 100%;">
@@ -193,7 +193,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="contant">
+                        <!-- <div class="contant">
                             <div class="card" style="background-image: none;">
                                 <div class="cardLeft" style="width: 100%;">
                                     <div class="cardLabel">
@@ -221,9 +221,18 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <div style="text-align: center;margin: 18px 0 0 0;">工作、校园经历</div>
-                    </div> -->
+                    </div>
+                    <div class="bus">
+                        <img src="http://safere.oss-cn-guangzhou.aliyuncs.com/about1.jpg" style="width: 50%;" />
+                    </div>
+                    <div class="detail">
+                        <div class="dText">
+                            <div>■&nbsp;&nbsp;在工业互联网里，曾参与HRMS、MES系统的开发。&nbsp;&nbsp;</div>
+                            <div></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="introduce">
                     <div class="i"></div>
@@ -287,7 +296,7 @@ export default {
     watch: {},
     computed: {},
     methods: {
-        preview(index) {},
+        preview(index) { },
     },
     created() { },
     mounted() { }
@@ -410,7 +419,7 @@ export default {
                     max-width: 420px;
                     background-color: aqua;
                     border-radius: 10px;
-                    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../../assets/img/about/school.jpg);
+                    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(../../assets/img/about/school.jpg);
                     background-color: rgba(255, 255, 255, 0.1);
                     background-size: 100% 100%;
                     margin-top: 12px;
@@ -498,6 +507,16 @@ export default {
                 }
             }
         }
+    }
+}
+
+.bus{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    img{
+        width: 50%;
     }
 }
 

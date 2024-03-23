@@ -1,5 +1,5 @@
 <template>
-    <div class="all">
+    <div class="padAll">
         <el-tabs class="tabs" v-model="activeName" @tab-click="handleClick">
             <el-tab-pane label="其他" name="first"></el-tab-pane>
             <el-tab-pane label="js" name="second"></el-tab-pane>
@@ -23,7 +23,7 @@
             </div>
         </div>
         <div class="pad" v-show="active == 1">
-            <div class="label" v-for="item, index in arr" :key="index" v-show="item.class == active" >
+            <div class="label" v-for="item, index in arr" :key="index" v-show="item.class == active" @click="toDetail(item.id)">
                 <div
                     style="display: flex;flex-wrap: wrap;align-items: center;width: 100%;justify-content: space-between;">
                     <div class="tit">{{ item.describe }}</div>
@@ -99,7 +99,7 @@ export default {
     background-color: black;
 }
 
-.all {
+.padAll {
     animation: dh 1s;
 }
 
@@ -123,8 +123,7 @@ export default {
         box-shadow: 2px 5px 16px -5px rgba(0, 0, 0, .5);
         border-radius: 4px;
         padding: 10px 16px 12px 16px;
-        width: 86%;
-        height: auto;
+        max-width: 610px;
         cursor: pointer;
 
         .tit {
@@ -153,17 +152,43 @@ export default {
         }
     }
 }
-.nomore{
+
+.nomore {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    img{
+
+    img {
         width: 120px;
         height: 120px;
         opacity: 0.6;
     }
-    .text{
+
+    .text {
         font-size: 42px;
     }
+}
+
+@media screen and (min-width:981px) {
+    .label {
+        width: 600px;
+        height: 60px;
+    }
+
+    .label:hover {
+        width: 606px;
+        height: 62px;
+    }
+
+    /* // 屏幕大于等于981px的时候 */
+}
+
+@media screen and (max-width:980px) {
+    .label {
+        width: 84%;
+        height: auto;
+    }
+
+    /* // 屏幕小于等于980px的时候 */
 }
 </style>
