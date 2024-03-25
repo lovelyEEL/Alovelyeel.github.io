@@ -115,6 +115,8 @@ export default {
     .label {
         width: 84%;
         height: auto;
+        box-shadow:   3px 3px 16px #cccccc,
+             -3px -3px 16px #f4f4f4;
     }
 
     /* // 屏幕小于等于980px的时候 */

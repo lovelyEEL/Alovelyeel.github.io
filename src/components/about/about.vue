@@ -27,7 +27,7 @@
                         <div>👽梁润豪</div>
                     </div>
                     <div class="dText">
-                        <div>■&nbsp;&nbsp;粗略开发，兼容PC端和手机端&nbsp;&nbsp;</div>
+                        <div>■&nbsp;&nbsp;粗略开发，兼容PC端和手机端，请勿抄袭&nbsp;&nbsp;</div>
                         <div></div>
                     </div>
                 </div>
