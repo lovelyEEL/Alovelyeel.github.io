@@ -232,6 +232,14 @@
                             <div>■&nbsp;&nbsp;在工业互联网里，曾参与HRMS、MES系统的开发。&nbsp;&nbsp;</div>
                             <div></div>
                         </div>
+                        <div class="dText">
+                            <div>■&nbsp;&nbsp;精通基于Vue框架项目开发。熟悉react。&nbsp;&nbsp;</div>
+                            <div></div>
+                        </div>
+                        <div class="dText">
+                            <div>■&nbsp;&nbsp;熟悉Echarts、Canvas等。&nbsp;&nbsp;</div>
+                            <div></div>
+                        </div>
                     </div>
                 </div>
                 <div class="introduce">

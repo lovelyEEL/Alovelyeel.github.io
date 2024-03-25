@@ -23,7 +23,8 @@
             </div>
         </div>
         <div class="pad" v-show="active == 1">
-            <div class="label" v-for="item, index in arr" :key="index" v-show="item.class == active" @click="toDetail(item.id)">
+            <div class="label" v-for="item, index in arr" :key="index" v-show="item.class == active"
+                @click="toDetail(item.id)">
                 <div
                     style="display: flex;flex-wrap: wrap;align-items: center;width: 100%;justify-content: space-between;">
                     <div class="tit">{{ item.describe }}</div>
@@ -39,7 +40,8 @@
             </div>
         </div>
         <div class="pad" v-show="active == 2">
-            <div class="label" v-for="item, index in arr" :key="index" v-show="item.class == active" @click="toDetail(item.id)">
+            <div class="label" v-for="item, index in arr" :key="index" v-show="item.class == active"
+                @click="toDetail(item.id)">
                 <div
                     style="display: flex;flex-wrap: wrap;align-items: center;width: 100%;justify-content: space-between;">
                     <div class="tit">{{ item.describe }}</div>
@@ -55,7 +57,8 @@
             </div>
         </div>
         <div class="pad" v-show="active == 3">
-            <div class="label" v-for="item, index in arr" :key="index" v-show="item.class == active" @click="toDetail(item.id)">
+            <div class="label" v-for="item, index in arr" :key="index" v-show="item.class == active"
+                @click="toDetail(item.id)">
                 <div
                     style="display: flex;flex-wrap: wrap;align-items: center;width: 100%;justify-content: space-between;">
                     <div class="tit">{{ item.describe }}</div>
@@ -152,7 +155,6 @@ export default {
 
     .label {
         margin-bottom: 20px;
-        box-shadow: 2px 5px 16px -5px rgba(0, 0, 0, .5);
         border-radius: 4px;
         padding: 10px 16px 12px 16px;
         max-width: 610px;
@@ -205,11 +207,14 @@ export default {
     .label {
         width: 600px;
         height: 60px;
+        box-shadow: 3px 3px 16px #cccccc,
+            -3px -3px 16px #f4f4f4;
     }
 
     .label:hover {
-        width: 606px;
-        height: 62px;
+        box-shadow: 6px 6px 6px #cecece,
+            -3px -3px 16px #a8a8a8;
+
     }
 
     /* // 屏幕大于等于981px的时候 */

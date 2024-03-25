@@ -99,10 +99,13 @@ export default {
     .label {
         width: 600px;
         height: 60px;
+        box-shadow:   3px 3px 16px #cccccc,
+             -3px -3px 16px #f4f4f4;
     }
     .label:hover{
-        width: 606px;
-        height: 62px;
+        box-shadow:   6px 6px 6px #cecece,
+             -3px -3px 16px #a8a8a8;
+        
     }
 
     /* // 屏幕大于等于981px的时候 */
@@ -136,8 +139,6 @@ export default {
 
     .label {
         margin-bottom: 20px;
-        box-shadow:   3px 3px 16px #cccccc,
-             -3px -3px 16px #f4f4f4;
         border-radius: 4px;
         padding: 10px 16px 12px 16px;
         cursor: pointer;

@@ -1,3 +1,5 @@
+  ![alt text](./github-fill.png)
+
   本博客主要记录**前端八股文**知识，涵盖范围为vue、react、JavaScript和网络等
 
   本站前端基于**Vue2**框架开发，所用插件主要如下：
