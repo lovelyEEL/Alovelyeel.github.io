@@ -4,7 +4,7 @@
             <el-tab-pane label="其他" name="first"></el-tab-pane>
             <el-tab-pane label="js" name="second"></el-tab-pane>
             <el-tab-pane label="框架" name="third"></el-tab-pane>
-            <el-tab-pane label="三大件" name="four"></el-tab-pane>
+            <el-tab-pane label="Html/CSS" name="four"></el-tab-pane>
         </el-tabs>
         <div class="pad" v-show="active == 0">
             <div class="label" v-for="item, index in arr" :key="index" v-show="item.class == active"
@@ -23,6 +23,38 @@
             </div>
         </div>
         <div class="pad" v-show="active == 1">
+            <div class="label" v-for="item, index in arr" :key="index" v-show="item.class == active" @click="toDetail(item.id)">
+                <div
+                    style="display: flex;flex-wrap: wrap;align-items: center;width: 100%;justify-content: space-between;">
+                    <div class="tit">{{ item.describe }}</div>
+                    <div class="date">{{ item.date }}</div>
+                </div>
+                <div
+                    style="display: flex;flex-wrap: wrap;align-items: center;width: 100%;justify-content: space-between;margin-top: 4px;">
+                    <div class="author">文章类型：{{ item.author }}</div>
+                    <div class="typeLabel">
+                        <div class="type" v-for="i in item.type" :key="i">{{ i }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pad" v-show="active == 2">
+            <div class="label" v-for="item, index in arr" :key="index" v-show="item.class == active" @click="toDetail(item.id)">
+                <div
+                    style="display: flex;flex-wrap: wrap;align-items: center;width: 100%;justify-content: space-between;">
+                    <div class="tit">{{ item.describe }}</div>
+                    <div class="date">{{ item.date }}</div>
+                </div>
+                <div
+                    style="display: flex;flex-wrap: wrap;align-items: center;width: 100%;justify-content: space-between;margin-top: 4px;">
+                    <div class="author">文章类型：{{ item.author }}</div>
+                    <div class="typeLabel">
+                        <div class="type" v-for="i in item.type" :key="i">{{ i }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pad" v-show="active == 3">
             <div class="label" v-for="item, index in arr" :key="index" v-show="item.class == active" @click="toDetail(item.id)">
                 <div
                     style="display: flex;flex-wrap: wrap;align-items: center;width: 100%;justify-content: space-between;">

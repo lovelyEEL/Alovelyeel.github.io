@@ -12,13 +12,21 @@
 import pages1 from '../../assets/mdPages/pages1.md'
 import pages2 from '../../assets/mdPages/pages2.md'
 import pages3 from '../../assets/mdPages/pages3.md'
+import pages4 from '../../assets/mdPages/pages4.md'
+import pages5 from '../../assets/mdPages/pages5.md'
+import pages6 from '../../assets/mdPages/pages6.md'
+import pages7 from '../../assets/mdPages/pages7.md'
 import "highlight.js/styles/github.css";
 import "github-markdown-css";
 export default {
     components: {
         pages1,
         pages2,
-        pages3
+        pages3,
+        pages4,
+        pages5,
+        pages6,
+        pages7
     },
     props: {},
     data() {
